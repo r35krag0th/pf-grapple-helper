@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom dark theme - deep slate with soft yellow accent */
+@plugin "daisyui/theme" {
+  name: "grapple";
+  default: true;
+  color-scheme: dark;
+
+  --color-base-100: #0f172a;     /* slate-900 */
+  --color-base-200: #1e293b;     /* slate-800 */
+  --color-base-300: #334155;     /* slate-700 */
+  --color-base-content: #e2e8f0; /* slate-200 */
+
+  --color-primary: #fef9c3;      /* yellow-100 - soft */
+  --color-primary-content: #422006; /* yellow-950 for contrast */
+
+  --color-secondary: #94a3b8;    /* slate-400 */
+  --color-secondary-content: #0f172a;
+
+  --color-accent: #fef08a;       /* yellow-200 */
+  --color-accent-content: #422006;
+
+  --color-neutral: #1e293b;      /* slate-800 */
+  --color-neutral-content: #e2e8f0;
+
+  --color-info: #3b82f6;
+  --color-info-content: #ffffff;
+  --color-success: #22c55e;
+  --color-success-content: #ffffff;
+  --color-warning: #fef9c3;      /* yellow-100 */
+  --color-warning-content: #422006;
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+}

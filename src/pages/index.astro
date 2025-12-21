@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GrappleWizard from "../components/GrappleWizard";
+---
+
+<Layout title="Pathfinder Grapple Helper">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-2">
+        <span class="text-primary">🤼</span> Pathfinder Grapple Helper
+      </h1>
+      <p class="text-base-content/70 max-w-lg mx-auto">
+        A friendly step-by-step guide to navigate the notoriously confusing
+        Pathfinder 1e grappling rules. No more flowchart nightmares!
+      </p>
+    </header>
+
+    <!-- Main wizard -->
+    <main>
+      <GrappleWizard client:load />
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-12 text-sm opacity-60">
+      <p>
+        Made with 💜 for confused Pathfinder players everywhere
+      </p>
+    </footer>
+  </div>
+</Layout>

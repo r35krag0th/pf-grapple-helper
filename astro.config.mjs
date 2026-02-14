@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, envField } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import { execFileSync } from 'node:child_process';
 
 import tailwindcss from '@tailwindcss/vite';
@@ -17,21 +17,8 @@ export default defineConfig({
     define: {
       __COMMIT_SHA__: JSON.stringify(commitSha),
       __COMMIT_SHA_SHORT__: JSON.stringify(commitSha.slice(0, 7)),
-    },
-  },
-
-  env: {
-    schema: {
-      DD_APP_ID: envField.string({
-        context: 'client',
-        access: 'public',
-        optional: true,
-      }),
-      DD_CLIENT_TOKEN: envField.string({
-        context: 'client',
-        access: 'public',
-        optional: true,
-      }),
+      __DD_APP_ID__: JSON.stringify(process.env.DD_APP_ID || ''),
+      __DD_CLIENT_TOKEN__: JSON.stringify(process.env.DD_CLIENT_TOKEN || ''),
     },
   },
 

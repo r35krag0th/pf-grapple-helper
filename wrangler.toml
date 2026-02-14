@@ -1,3 +1,7 @@
 name = "grapple-helper"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-02-13"
+
+[vars]
+DD_APP_ID = "a9f0dd73-34a2-4a60-8840-08f7a85cf9e6"
+DD_CLIENT_TOKEN = "pub41d61d632aa1427ea2f49485f8aa05e7"

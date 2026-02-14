@@ -29,14 +29,12 @@ const { title } = Astro.props;
           applicationId: DD_APP_ID,
           clientToken: DD_CLIENT_TOKEN,
           site: "datadoghq.com",
-          service: "pf-grapple-helper",
+          service: "grapple-helper",
           env: "production",
           version: __COMMIT_SHA_SHORT__,
           sessionSampleRate: 100,
           sessionReplaySampleRate: 20,
-          trackUserInteractions: true,
-          trackResources: true,
-          trackLongTasks: true,
+          trackBfcacheViews: true,
           defaultPrivacyLevel: "mask-user-input",
         });
       }

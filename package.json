@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=pf-grapple-helper"
+    "deploy": "npm run build && wrangler pages deploy"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

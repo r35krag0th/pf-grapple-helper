@@ -1146,7 +1146,7 @@ export const outsideTree: DecisionTree = {
         {
           id: "defender",
           label: "Grapple the Defender",
-          nextNodeId: "outside-join-result",
+          nextNodeId: "outside-join-defender",
         },
       ],
     },
@@ -1156,13 +1156,29 @@ export const outsideTree: DecisionTree = {
       type: "result",
       title: "🤼 Joining the Grapple",
       content:
-        "Make a grapple attempt against your target. If you succeed, you're now grappling them too! This can get complicated with multiple grapplers.",
+        "Make a grapple attempt against the grappler. Standard grapple initiation rules apply — if you succeed, you're now grappling them too!",
       mechanics:
-        "Standard grapple rules apply:\n• Provokes AoO without Improved Grapple\n• CMB vs CMD\n• Both you and target become grappled on success",
+        "Standard grapple rules apply:\n• Provokes AoO without Improved Grapple\n• CMB vs CMD\n• Both you and target become grappled on success\n\nThe grappler's CMD may be reduced:\n• Grappled condition = -4 Dex (typically -2 CMD)\n• If they're pinning, they lose Dex bonus to AC",
       tips: [
         "Multiple grapplers make it very hard to escape",
-        "You can coordinate with allies",
-        "The original grappler might still have their +5 bonus",
+        "You do NOT get the +5 maintain bonus — that's only for the existing controller",
+        "Consider Aid Another (+2 to ally's CMB) instead — it's often more effective",
+      ],
+    },
+
+    "outside-join-defender": {
+      id: "outside-join-defender",
+      type: "result",
+      title: "🤼 Grappling the Defender",
+      content:
+        "Make a grapple attempt against the already-grappled/pinned creature. Their conditions work in your favor — their CMD is reduced and they may not be able to threaten you at all.",
+      mechanics:
+        "CMB vs their CMD, but their CMD is lower:\n• Grappled: -4 Dex (typically -2 CMD)\n• Pinned: Denied Dex bonus entirely (CMD drops further)\n\nAoO from the target:\n• Grappled/Pinned creatures CANNOT make AoOs\n• You won't provoke from them (but watch for their allies!)",
+      tips: [
+        "A pinned target's CMD can be significantly lower than normal",
+        "You do NOT get the +5 maintain bonus — that's only for the existing controller",
+        "Each independent grappler forces a separate escape check",
+        "Consider Aid Another (+2 to ally's CMB) instead if you want to keep things simple",
       ],
     },
   },

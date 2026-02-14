@@ -10,11 +10,6 @@ import react from '@astrojs/react';
 const commitSha = process.env.CF_PAGES_COMMIT_SHA
   || execFileSync('git', ['rev-parse', 'HEAD']).toString().trim();
 
-// Debug: log env var availability during build
-console.log('[build] CF_PAGES_COMMIT_SHA:', process.env.CF_PAGES_COMMIT_SHA ? 'SET' : 'NOT SET');
-console.log('[build] DD_APP_ID:', process.env.DD_APP_ID ? 'SET' : 'NOT SET');
-console.log('[build] DD_CLIENT_TOKEN:', process.env.DD_CLIENT_TOKEN ? 'SET' : 'NOT SET');
-
 // https://astro.build/config
 export default defineConfig({
   vite: {

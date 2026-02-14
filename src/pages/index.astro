@@ -26,6 +26,11 @@ import GrappleWizard from "../components/GrappleWizard";
       <p>
         Made with 💜 for confused Pathfinder players everywhere
       </p>
+      <p class="mt-1 font-mono text-xs opacity-50" id="build-version"></p>
     </footer>
+    <script>
+      const el = document.getElementById("build-version");
+      if (el) el.textContent = __COMMIT_SHA_SHORT__;
+    </script>
   </div>
 </Layout>
